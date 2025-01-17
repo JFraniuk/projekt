@@ -99,6 +99,6 @@ def pvp():
         for i, (poprzednieodgadniecie, poprzednieprawidlowe, poprzedniezle) in enumerate(poprzednie, start=1):
             print(f"próba nr {i}: {poprzednieodgadniecie}, trafienia na prawidłowym miejscu: {poprzednieprawidlowe}, trafienia prawidłowa cyfra, ale na złym miejscu: {poprzedniezle}")
 
-pvp()
+
 
     
