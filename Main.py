@@ -16,7 +16,7 @@ nick1 = args.nick1
 nick2 = args.nick2
 
 if trybGry == None:
-    print("Witaj w świecie, bla bla bla wybierz opcję gry\n1.gracz vs gracz\n2.gracz vs komputer\n3.komputer vs gracz")
+    print("Witaj w świecie, wybierz opcję gry\n1.gracz vs gracz\n2.gracz vs komputer\n3.komputer vs gracz")
     wybor = input()
 
     while True:
@@ -43,7 +43,7 @@ if trybGry == "PvP" and nick2 == None:
 
 match trybGry:
     case "PvP":
-        PvP.pvp()
+        PvP.pvp(nick1, nick2)
     case "PvE":
         PvE.PvE()
     case "EvP":
