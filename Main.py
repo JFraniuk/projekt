@@ -45,6 +45,6 @@ match trybGry:
     case "PvP":
         PvP.pvp(nick1, nick2)
     case "PvE":
-        PvE.PvE()
+        PvE.PvE(nick1)
     case "EvP":
         pass #TODO
