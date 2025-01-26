@@ -6,12 +6,21 @@ correct_place = 0
 correct_number_wrong_place = 0
 code_length = 6
 
+'''
+Funkcja generate_code odpowiada za początkowe generowanie kodu przez komputer, który później odgaduje gracz.
+Wywołuje ona globalną zmienną code, po czym iteracyjnie zapełnia listę o długości code_length code integerami z zakresu (0,9).
+'''
+
 def generate_code(code_length):
     global code
     code = []
     for i in range (0,code_length):
         code.append(random.randint(0,9))
-    print(code)
+
+'''
+FUnkcja player_guess_reader sczytuje próbę zgadnięcia kodu jako input string, player_guess_str, o długości globalnej zmiennej code_length. Najpierw sprawdza czy string ma odpowiednią długość,
+po czym sprawdza format każdego znaku w stringu, aby upewnić się, że są cyframi. Następnie iteruje przez każdy znak player_guess_str wymuszając typ int, tworząc int list player_guess.
+'''
 
 def player_guess_reader(code_length):
     player_guess_str = input("Podaj próbę odgadnięcia: ")
@@ -22,12 +31,18 @@ def player_guess_reader(code_length):
     print(player_guess)
     return player_guess
 
+'''
+Funkcja evaluate_guess wylciza zmienne correct_place i correct_number_wrong_place na bazie int list code i player_guess. Zwraca liczbę cyfr w próbie zgadnięcia, które są na tym samym miejscu w liście code,
+oraz liczbę cyfr, które występują w liście code, ale nie są na poprawnym miejscu. Wywołuej globalne zmienne correct_place i correct_number_wrong_place, po czym sprawdza dla każdego indeksu (0, code_length)
+porównuje dany indeks z listy code i player_guess, jeżeli warunek jest spełniony, licznik correct_place wzrasta o 1. Następna pętla odpowiada za correct_number_wrong_place. Dla każdego indeksu w zakresie
+(0, code_length) dla listy code iteruje przez każdy indeks listy player_guess. Licznik zwiększa się o 1 wyłącznie jeśli indeksy i i j są różne.
+'''
 
 def evaluate_guess(code, player_guess):
     global correct_place
     global correct_number_wrong_place
     correct_place = 0
-    correct_number_wrong_plac = 0
+    correct_number_wrong_place = 0
     
     matched_code = [False] * code_length
     matched_guess = [False] * code_length
@@ -50,10 +65,16 @@ def evaluate_guess(code, player_guess):
                     matched_code[j] = True
                     break
             
+'''
+Funkcja gra odpowiada za przebieg gry, po princie powitania gracza i krótkiego opisu przebiegu, generuje kod, po czym wykorzystująć pętlę while True, wywołuje funkcje player_guess_reader oraz evaluate_guess
+aby przy każdej rundzie gracz mógł podać nowy kod. Pętla kończy się, jeżeli int listy code i player_guess są identyczne. Po końcu pętli podaje też liczbę prób w danej grze.
+'''
 
 def gra():
     global guess_count
     guess_count = 0
+    
+    print("Witaj w trybie gracz vs komputer!\nW tym trybie, komputer podaje kod, którego zgadnięcie jest zadaniem gracza.\nJako gracz twoja tura polega na wprowadzniu próby zgadnięcia,\nna co komputer odpowie liczbą odgadniętych cyfr, oraz liczbą cyfr w szyfrze, które nie są na swoim miejscu.\nPowodzenia!")
     
     generate_code(code_length)
     
