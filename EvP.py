@@ -72,4 +72,3 @@ def gra():
         print(f"Poprawne miejsca: {correct_place}, Poprawne liczby w złych miejscach: {correct_number_wrong_place}")
 
 
-gra()
