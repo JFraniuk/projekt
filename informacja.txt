@@ -1,0 +1,5 @@
+Nasz algorytm, aby wygrac dla szyfrów 4-cyfrowych potrzebuje minimalnie 1 zgadnięcia, a maksymalnie 36 (oczywiście przy założeniu, że gracz zawsze odpowida zgodnie z prawdą). 
+Scenariusz dla 36 zganięć:
+Szyfr gracza to 9999, pierwsze losowe zgadnięcie komputera to 0000, algorytm działa tak, że komputerowi wygrana zajmie 36 zgadnięć.
+Scenariusz dla 1 zgdnięcia:
+Szyfr gracza może być losowy (np. 3728), a komputer pierwszym losowym zgadnięciem zdoła trafić dokładny szyfr gracza.
