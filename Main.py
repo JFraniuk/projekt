@@ -8,7 +8,7 @@ parser = argparse.ArgumentParser()
 
 parser.add_argument("-t", "--tryb", help = "Podaj tryb gry: PvP, PvE, EvP")
 parser.add_argument("-n1", "--nick1", help = "Podaj nick gracza")
-parser.add_argument("-n2", "--nick2", help = "Podaj nick drugiego gracza")
+parser.add_argument("-n2", "--nick2", help = "Podaj nick drugiego gracza, jeśli tryb gry to PvP")
 
 args = parser.parse_args() # parsowanie argumentow podanych przez uzytkownika
 
