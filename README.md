@@ -7,7 +7,7 @@ Projekt "Gra w odgadywanie"
 - [Jakub Franiuk](https://github.com/JFraniuk)
 - [Emilia Łagoda](https://github.com/emmmalag)
 - [Aleksandra Cichecka](https://github.com/0lvsia)
-- [Jeremi Barciński](https://github.com/zgeryp4l4)
+- [Jeremi Barciński](https://github.com/JBarcinski)
 
 ## Instruction
 1) Upewnij się, że masz zainstalowanego pythona w wersji conajmniej 3.12.0. Jeśli nie masz, zainstaluj.
